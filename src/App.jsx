@@ -3,7 +3,7 @@ import { lists } from "./data/list";
 
 
 function App() {
-  console.log(lists);
+  // console.log(lists);
   return (
     <div>
       <h1>Todo list</h1>

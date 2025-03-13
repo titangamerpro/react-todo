@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Items from './Items'
 
 
-
 const List = ({lists}) => {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('todoList'))|| [])
 
@@ -11,10 +10,16 @@ const List = ({lists}) => {
     setItems(listItems)
     localStorage.setItem('todoList', JSON.stringify(listItems))
   }
-  console.log(setItems);
+  console.log();
+
+  const handlDelet = id => {
+    const itemss = items.filter(item => item.id !== id)
+    setItems(itemss)
+  }
+
   return (
     <>
-      <Items lists={items} handleCheck={handleCheck} /> 
+      <Items lists={items} handleCheck={handleCheck} handlDelet={handlDelet} /> 
 
     </>
   )

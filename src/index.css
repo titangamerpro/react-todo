@@ -82,5 +82,12 @@ button:focus-visible {
   flex: 1;
 }
 
+.trash {
+  font-size: 45px;
+  transition: .3s;
+}
 
-
+.trash:hover {
+  fill: red;
+  cursor: pointer;
+}

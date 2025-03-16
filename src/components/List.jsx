@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Items from './Items'
+import SearchItems from './SearchItems'
+
 
 
 const List = ({lists}) => {
@@ -19,6 +21,7 @@ const List = ({lists}) => {
 
   return (
     <>
+      <SearchItems/>
       <Items lists={items} handleCheck={handleCheck} handlDelet={handlDelet} /> 
 
     </>

@@ -1,18 +1,18 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Items = ({ lists, handleCheck, handlDelet }) => {
-  // console.log(lists);
+const Items = ({ items, handleCheck, handlDelet }) => {
+  // console.log(items);
   return (
     <>
-      {lists.length ? (
+      {items.length ? (
         <ul className="lists">
-          {lists.map((list) => (
+          {items.map((list) => (
             <li className="item" key={list.id}>
               <input
                 type="checkbox"
                 checked={list.checked}
-                onClick={() => handleCheck(list.id)}
+                onChange={() => handleCheck(list.id)}
               />
               <label className="tittle" htmlFor="">
                 {list.body}

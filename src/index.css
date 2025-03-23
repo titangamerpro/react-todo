@@ -97,3 +97,49 @@ button:focus-visible {
   margin: 0 auto;
   display: block;
 }
+
+.searchForm {
+  display: flex;
+  justify-content: center; /* Центрирование формы по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  margin: 20px; /* Отступ вокруг формы */
+}
+
+.searchForm input {
+  padding: 10px; /* Отступ внутри поля ввода */
+  border: 1px solid #ccc; /* Рамка поля ввода */
+  border-radius: 5px; /* Скругление углов */
+  width: 100%; /* Ширина поля ввода */
+}
+
+.addform {
+  display: flex;
+  justify-content: center; /* Центрирование формы по горизонтали */
+  margin: 20px; /* Отступ вокруг формы */
+  gap: 2px;
+}
+
+.addform input {
+  padding: 10px; /* Отступ внутри поля ввода */
+  border: 1px solid #ccc; /* Рамка поля ввода */
+  border-radius: 5px; /* Скругление углов */
+  flex: 1;
+}
+
+.addform button {
+  background-color: #28a745; /* Цвет фона кнопки */
+  color: white; /* Цвет текста на кнопке */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Скругление углов кнопки */
+  padding: 10px 15px; /* Отступ внутри кнопки */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.addform button:hover {
+  background-color: #218838; /* Цвет фона кнопки при наведении */
+}
+
+.faplus {
+  font-size: 1.2em; /* Размер иконки */
+}

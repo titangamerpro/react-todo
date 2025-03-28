@@ -143,3 +143,12 @@ button:focus-visible {
 .faplus {
   font-size: 1.2em; /* Размер иконки */
 }
+
+.checked{
+  text-decoration: line-through;
+  color: grey;
+}
+
+.title {
+  flex: 1;
+}

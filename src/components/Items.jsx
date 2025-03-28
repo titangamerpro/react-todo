@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Items = ({ items, handleCheck, handlDelet }) => {
+const Items = ({ items,setItems, handleCheck, handlDelet }) => {
   // console.log(items);
   return (
     <>
@@ -14,7 +14,7 @@ const Items = ({ items, handleCheck, handlDelet }) => {
                 checked={list.checked}
                 onChange={() => handleCheck(list.id)}
               />
-              <label className="tittle" htmlFor="">
+              <label className={`title ${list.checked ? 'checked': ''}`} htmlFor="">
                 {list.body}
               </label>
               <FaTrashAlt

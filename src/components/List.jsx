@@ -11,13 +11,17 @@ const List = () => {
 
   const [newItem, setNewItem] = useState('')
 
+  const [searchItem, setSearchItem] = useState('')
+
   const addItem = item => {
     const id = items.length ? items[items.length -1].id+1 : 1 
-    const myNewItem = {id, checked:true, body:item}
+    const myNewItem = {id, checked:false, body:item}
     const listItem = [...items, myNewItem]
     setItems(listItem)
  
   }
+
+  const sortItems = [...items].sort((a, b) => a.checked - b.checked)
 
   useEffect(() => {
        localStorage.setItem('todoList', JSON.stringify(items))
@@ -44,9 +48,13 @@ const List = () => {
 
   return (
     <>
-      <SearchItems/>
+      <SearchItems searchItem={searchItem} setSearchItem={setSearchItem} />
       <AddItem handlSabmit={handlSabmit} newItem={newItem} setNewItem={setNewItem} />
-      <Items items={items} handleCheck={handleCheck} handlDelet={handlDelet} /> 
+      <Items 
+        items={sortItems.filter(item => (item.body).toLowerCase().includes(searchItem.toLowerCase()))} 
+        setItems={setItems}
+        handleCheck={handleCheck} 
+        handlDelet={handlDelet} /> 
 
     </>
   )
